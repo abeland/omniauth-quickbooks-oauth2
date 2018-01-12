@@ -1,4 +1,4 @@
-# omniauth-quickbooks-oauth2
+# [omniauth-quickbooks-oauth2](https://rubygems.org/gems/omniauth-quickbooks-oauth2)
 
 This gem provides an Omniauth strategy to connect with Quickbooks (via Intuit) using OAuth2.
 
