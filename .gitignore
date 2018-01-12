@@ -1,0 +1,5 @@
+*~
+/vendor
+# OS X
+.DS_STORE
+.bundle/
