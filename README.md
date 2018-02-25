@@ -40,6 +40,8 @@ end
 
 **ALSO NOTE: If the `sandbox` parameter is not explicitly set to `false`, then the strategy will default to using the sandbox endpoints for Intuit's API.**
 
+**ALSO NOTE: If you request the `profile`, `address`, `email`, and/or `phone` scopes, you must also specify the `openid` scope or else Intuit will not allow the OAuth2 dance to happen.**
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/abeland/omniauth-quickbooks-oauth2.
