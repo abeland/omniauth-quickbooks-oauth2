@@ -14,7 +14,7 @@ module OmniAuth
         },
       )
 
-      uid { request.params['realmId'] }
+      uid { info['sub'] }
 
       info do
         raw_info
