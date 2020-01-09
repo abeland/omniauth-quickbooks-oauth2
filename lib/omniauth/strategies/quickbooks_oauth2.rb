@@ -33,8 +33,25 @@ module OmniAuth
       def callback_url
         options[:redirect_uri] || (full_host + script_name + callback_path)
       end
+      
+      def request_phase
+        log :info, "\n....REQUEST PHASE.\n..request.params..#{request.params}.\n..authorize_params...#{authorize_params}.......\n"
+        super
+      end
+
+      def callback_phase 
+        error = request.params["error_reason"] || request.params["error"]
+        log :info, "\n....CALLBACK PHASE.\n..error..#{error.inspect}..\n"
+        super
+      end
 
       private
+
+      def build_access_token
+        verifier = request.params["code"]
+        log :info, "\n....build_access_token method.\n...request.params....#{request.params}...\n"  
+        super
+      end
 
       def accounts_domain
         false == options.sandbox ? 'accounts.platform.intuit.com' : 'sandbox-accounts.platform.intuit.com'
