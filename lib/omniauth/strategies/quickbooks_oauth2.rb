@@ -21,7 +21,10 @@ module OmniAuth
       end
 
       extra do
-        { raw_info: raw_info }
+        {
+          raw_info: raw_info,
+          params: access_token.params,
+        }
       end
 
       def raw_info
